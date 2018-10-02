@@ -21,7 +21,8 @@ export default function createPopperElement(id, title, settings) {
     theme,
     html,
     zIndex,
-    interactive
+    interactive,
+    popperClassName
   } = settings
 
   const popper = document.createElement('div')
@@ -38,6 +39,12 @@ export default function createPopperElement(id, title, settings) {
   theme.split(' ').forEach(t => {
     tooltip.classList.add(t +'-theme')
   })
+
+  if (popperClassName) {
+    popperClassName.split(' ').forEach(t => {
+      tooltip.classList.add(t)
+    })
+  }
 
   if (arrow) {
     // Add an arrow

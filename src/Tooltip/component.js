@@ -220,6 +220,7 @@ class Tooltip extends Component {
         reactInstance: this.props.useContext ? this : undefined,
         performance: true,
         html: this.props.rawTemplate ? this.props.rawTemplate : undefined,
+        popperClassName: this.props.popperClassName,
       });
       if (this.props.open) {
         this.showTooltip();

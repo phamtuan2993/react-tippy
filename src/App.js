@@ -232,7 +232,19 @@ class App extends Component {
             Interactive tooltip
           </span>
         </Tooltip>
-
+        <hr />
+        <Tooltip
+          // options
+          title="Tooltip with specific className"
+          position="bottom"
+          trigger="click"
+          popperClassName="example test anythingelse"
+        >
+          <p>
+            customized popperClassName tooltip
+          </p>
+        </Tooltip>
+        <hr />
         <Example />
       </div>
     );
